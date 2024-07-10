@@ -1,0 +1,42 @@
+<cu-custom bgColor="bg-gradual-pink" isBack="{{true}}">
+	<view slot="backText">返回</view>
+	<view slot="content">问诊记录</view>
+</cu-custom>
+<form>
+	<view class="cu-form-group margin-top">
+		<view class="title">姓名</view>
+		<input placeholder="王淑华"></input>
+	</view>
+	
+
+	<view class="cu-form-group margin-top">
+		<view class="title">问诊历史</view>
+	</view>
+
+	<view class="cu-form-group">
+		<view class="title">时间</view>
+		<picker mode="time" value="{{time}}" start="09:01" end="21:01" bindchange="TimeChange">
+			<view class="picker">
+				{{time}}
+			</view>
+		</picker>
+	</view>
+
+
+	<view class="cu-form-group">
+		<view class="title">成员</view>
+		<input placeholder="用户本人"></input>
+	</view>
+
+	<view class="cu-form-group">
+    <view class="title">病情描述</view>
+    <text>王淑华有头痛和耳鸣症状出现，且昨晚王淑华有熬夜的行为，今早饮食高油高糖</text>
+	</view>
+
+  
+  <view class="cu-form-group">
+    <view class="title">华佗建议</view>
+    <text>根据王淑华的高血压病史、吃药情况和当前身体状况，小华建议您调整饮食，减少高油高糖食物的摄入，并保证充足的睡眠。同时，王淑华应该继续服用降压药物，并定期监测血压。</text>
+	</view>
+
+</form>

@@ -1,0 +1,80 @@
+<cu-custom bgColor="bg-gradual-pink" isBack="{{true}}">
+	<view slot="backText">返回</view>
+	<view slot="content">体征测量</view>
+</cu-custom>
+<form>
+	<view class="cu-form-group margin-top">
+		<view class="title">姓名</view>
+		<input placeholder="王淑华"></input>
+	</view>
+	<view class="cu-form-group">
+		<view class="title">性别</view>
+		<input placeholder="女"></input>
+	</view>
+	<view class="cu-form-group">
+		<view class="title">年龄</view>
+		<input placeholder="75"></input>
+	</view>
+	<view class="cu-form-group">
+		<view class="title">身高CM</view>
+		<input placeholder="160"></input>
+	</view>
+  	<view class="cu-form-group">
+		<view class="title">体重KG</view>
+		<input placeholder="64"></input>
+	</view>
+	<view class="cu-form-group">
+		<view class="title">手机号码</view>
+		<input placeholder="1500000000"></input>
+		<view class="cu-capsule radius">
+			<view class="cu-tag bg-blue">
+				+86
+			</view>
+			<view class="cu-tag line-blue">
+				中国大陆
+			</view>
+		</view>
+	</view>
+
+	<view class="cu-form-group">
+		<textarea maxlength="-1" disabled="{{modalName!=null}}" bindinput="textareaAInput" placeholder="高血压"></textarea>
+	</view>
+
+	<view class="cu-form-group margin-top">
+		<view class="title">体征测量</view>
+	</view>
+
+	<view class="cu-form-group">
+		<view class="title">测量时间</view>
+		<picker mode="time" value="{{time}}" start="09:01" end="21:01" bindchange="TimeChange">
+			<view class="picker">
+				{{time}}
+			</view>
+		</picker>
+	</view>
+
+	<view class="cu-form-group">
+		<view class="title">测量项</view>
+		<picker mode="multiSelector" bindchange="MultiChange" bindcolumnchange="MultiColumnChange" value="{{multiIndex}}"
+		 range="{{multiArray}}">
+			<view class="picker">
+				{{multiArray[0][multiIndex[0]]}}
+			</view>
+		</picker>
+	</view>
+
+  <radio-group class="block">
+		<view class="cu-form-group">
+			<view class="title">判断正常</view>
+			<radio checked>正常</radio>
+      <radio checked>异常</radio>
+		</view>
+	</radio-group>
+
+	<view class="cu-form-group">
+		<view class="title">测量结果</view>
+		<input placeholder="73次/分钟"></input>
+	</view>
+
+
+</form>

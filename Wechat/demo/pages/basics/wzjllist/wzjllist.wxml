@@ -1,0 +1,115 @@
+<scroll-view scroll-y="{{modalName==null}}" class="page {{modalName!=null?'show':''}}">
+  <cu-custom bgColor="bg-gradual-pink" isBack="{{true}}">
+    <view slot="backText">返回</view>
+    <view slot="content">患者列表</view>
+  </cu-custom>
+  
+  <view class="cu-bar bg-white solid-bottom margin-top">
+    <view class="action">
+      <text class="cuIcon-title text-orange "></text> 患者信息
+    </view>
+    <view class="action">
+      <button class="cu-btn bg-green shadow" bindtap="showModal" data-target="menuModal">设置</button>
+    </view>
+  </view>
+  <view class="cu-modal {{modalName=='menuModal'?'show':''}}" bindtap="hideModal">
+    <view class="cu-dialog" catchtap>
+      <scroll-view scroll-y style="height:300rpx">
+        <view class="cu-list menu text-left solid-top">
+          <view class="cu-item">
+            <view class="content">
+              <text class="text-grey">短边框</text>
+            </view>
+            <view class="action">
+              <switch bindchange="menuBorder"></switch>
+            </view>
+          </view>
+          <view class="cu-item">
+            <view class="content">
+              <text class="text-grey">箭头</text>
+            </view>
+            <view class="action">
+              <switch bindchange="menuArrow"></switch>
+            </view>
+          </view>
+          <view class="cu-item">
+            <view class="content">
+              <text class="text-grey">卡片</text>
+            </view>
+            <view class="action">
+              <switch bindchange="menuCard"></switch>
+            </view>
+          </view>
+          <view class="cu-item">
+            <view class="content">
+              <text class="text-grey">短边框</text>
+            </view>
+            <view class="action">
+              <switch bindchange="menuBorder"></switch>
+            </view>
+          </view>
+          <view class="cu-item">
+            <view class="content">
+              <text class="text-grey">箭头</text>
+            </view>
+            <view class="action">
+              <switch bindchange="menuArrow"></switch>
+            </view>
+          </view>
+          <view class="cu-item">
+            <view class="content">
+              <text class="text-grey">卡片</text>
+            </view>
+            <view class="action">
+              <switch bindchange="menuCard"></switch>
+            </view>
+          </view>
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+  <view class="cu-list menu {{menuBorder?'sm-border':''}} {{menuCard?'card-menu margin-top':''}}">
+    <view class="cu-item {{menuArrow?'arrow':''}}">
+      <navigator class="content" hover-class="none" url="../wzjl/wzjl" open-type="redirect">
+        <text class="cuIcon-discoverfill text-orange"></text>
+        <text class="text-grey">王淑华</text>
+      </navigator>
+      <view class="action">
+        <navigator class="content" hover-class="none" url="../wzjl/wzjl" open-type="redirect">
+        <button class="cu-btn round bg-green shadow">
+          <text class="cuIcon-upload"></text> 详情</button>
+          </navigator>
+      </view>
+    </view>
+    
+    <view class="cu-item {{menuArrow?'arrow':''}}">
+      <navigator class="content" hover-class="none" url="../wzjl/wzjl" open-type="redirect">
+        <text class="cuIcon-discoverfill text-orange"></text>
+        <text class="text-grey">李建国（老伴）</text>
+      </navigator>
+      <view class="action">
+        <navigator class="content" hover-class="none" url="../wzjl/wzjl" open-type="redirect">
+        <button class="cu-btn round bg-green shadow">
+          <text class="cuIcon-upload"></text> 详情</button>
+          </navigator>
+      </view>
+    </view>
+
+    <view class="cu-item {{menuArrow?'arrow':''}}">
+      <navigator class="content" hover-class="none" url="../wzjl/wzjl" open-type="redirect">
+        <text class="cuIcon-discoverfill text-orange"></text>
+        <text class="text-grey">李小龙（孙子）</text>
+      </navigator>
+      <view class="action">
+        <navigator class="content" hover-class="none" url="../wzjl/wzjl" open-type="redirect">
+        <button class="cu-btn round bg-green shadow">
+          <text class="cuIcon-upload"></text> 详情</button>
+          </navigator>
+      </view>
+    </view>
+
+
+  </view>
+
+  
+</scroll-view>
